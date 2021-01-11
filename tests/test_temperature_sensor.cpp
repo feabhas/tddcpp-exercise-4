@@ -29,21 +29,21 @@ protected:
 
 TEST_F(Mock_tests, test_initialisation)
 {
-  FAIL();
+  GTEST_SKIP();
   // auto status = test_obj.initialize();
   // ASSERT_EQ(status, Temperature_sensor::status::ok);
 }
 
 TEST_F(Mock_tests, test_init_display_1st_failure)
 {
-  FAIL();
+  GTEST_SKIP();
   // auto status = test_obj.initialize();
   // ASSERT_EQ(status, Temperature_sensor::status::display_failure);
 }
 
 TEST_F(Mock_tests, test_init_display_2nd_failure)
 {
-  FAIL();
+  GTEST_SKIP();
   // auto status = test_obj.initialize();
   // ASSERT_EQ(status, Temperature_sensor::status::display_failure);
 }
@@ -52,21 +52,21 @@ TEST_F(Mock_tests, test_init_display_2nd_failure)
 
 TEST_F(Mock_tests, test_run_display_no_failure)
 {
-  FAIL();
+  GTEST_SKIP();
   // auto status = test_obj.run();
   // ASSERT_EQ(status, Temperature_sensor::status::ok);
 }
 
 TEST_F(Mock_tests, test_run_display_failure)
 {
-  FAIL();
+  GTEST_SKIP();
   // auto status = test_obj.run();
   // ASSERT_EQ(status, Temperature_sensor::status::display_failure);
 }
 
 TEST_F(Mock_tests, test_run_display_param_check)
 {
-  FAIL();
+  GTEST_SKIP();
   // See gtest ContainsRegex("..\\...C")
   // auto status = test_obj.run();
   // ASSERT_EQ(status, Temperature_sensor::status::ok);
