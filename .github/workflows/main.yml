@@ -31,5 +31,5 @@ jobs:
         run: |
           meson builddir 
           cd builddir 
-          meson test
+          meson test -v
 
