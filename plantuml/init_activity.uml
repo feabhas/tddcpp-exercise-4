@@ -1,0 +1,41 @@
+@startuml
+|Temperature Sensor|
+start
+
+|sensor|
+:Read DS18B20 Rom;
+:assert Scratchpad data CRC;
+|Temperature Sensor|
+if (crc check) then (incorrect crc)
+    #pink:status::sensor_failure;
+    stop
+endif
+
+if (family code check) then (family_code != 0x28)
+    #pink:status::sensor_failure;
+    stop
+endif
+
+|display|
+:display family code "0x28";
+
+|Temperature Sensor|
+if (count == -1) then
+    #pink:status::display_failure;
+    stop
+endif
+
+|display|
+:display serial number "XX:XX:XX:XX";
+
+|Temperature Sensor|
+if (count == -1) then
+    #pink:status::display_failure;
+    stop
+endif
+
+
+#palegreen:return status::ok;
+stop
+
+@enduml
